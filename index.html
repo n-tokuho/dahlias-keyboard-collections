@@ -314,6 +314,300 @@
                 font-size: 1.8em;
             }
         }
+
+        /* A4縦向き印刷用スタイル */
+        @media print {
+            /* ページ設定：A4縦向き */
+            @page {
+                size: A4 portrait;
+                margin: 15mm;
+            }
+
+            /* 基本レイアウト調整 */
+            body {
+                background: none !important;
+                background-image: none !important;
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
+                line-height: 1.3;
+            }
+
+            .container {
+                max-width: none;
+                width: 100%;
+                background: white !important;
+                border: none !important;
+                box-shadow: none !important;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* ヘッダー調整 */
+            .header {
+                background: none !important;
+                color: black !important;
+                border: 2px solid black;
+                padding: 10px;
+                text-align: center;
+                page-break-inside: avoid;
+            }
+
+            .header::before {
+                display: none;
+            }
+
+            h1 {
+                color: black !important;
+                font-size: 24px !important;
+                text-shadow: none !important;
+                animation: none !important;
+                margin: 0;
+                text-decoration: none !important;
+            }
+
+            .subtitle {
+                color: black !important;
+                font-size: 14px !important;
+                text-shadow: none !important;
+                margin-top: 5px;
+            }
+
+            /* コンテンツエリア */
+            .content {
+                background: none !important;
+                padding: 10px 0;
+            }
+
+            /* アイテムグリッド：1列レイアウト（縦向き用） */
+            .items-grid {
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            .item {
+                background: white !important;
+                border: 1px solid black !important;
+                padding: 10px;
+                margin: 8px 0;
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .item:hover {
+                background: white !important;
+                border: 1px solid black !important;
+            }
+
+            .item-image {
+                width: 120px !important;
+                height: 90px !important;
+                background: #f0f0f0 !important;
+                border: 1px solid #ccc !important;
+                flex-shrink: 0;
+            }
+
+            .item-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .image-placeholder {
+                background: #f0f0f0 !important;
+                font-size: 14px;
+            }
+
+            .item-details {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .item-title {
+                font-size: 14px !important;
+                font-weight: bold;
+                color: black !important;
+                margin-bottom: 6px;
+                text-decoration: none !important;
+                line-height: 1.3;
+            }
+
+            .description {
+                color: black !important;
+                font-size: 11px !important;
+                line-height: 1.4;
+                margin: 6px 0;
+            }
+
+            .price {
+                background: black !important;
+                color: white !important;
+                padding: 4px 8px !important;
+                border: 1px solid black !important;
+                font-weight: bold;
+                font-size: 12px !important;
+                text-shadow: none !important;
+                animation: none !important;
+                display: inline-block;
+                margin-top: 6px;
+            }
+
+            .price:hover {
+                background: black !important;
+                color: white !important;
+                border: 1px solid black !important;
+            }
+
+            .badge {
+                background: #f0f0f0 !important;
+                color: black !important;
+                border: 1px solid black !important;
+                font-size: 8px !important;
+                padding: 1px 4px !important;
+                animation: none !important;
+                margin-left: 4px;
+            }
+
+            /* スイッチセクション */
+            .switches-section {
+                background: #f9f9f9 !important;
+                border: 2px solid black !important;
+                padding: 10px;
+                margin-top: 15px;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+
+            .switches-title {
+                font-size: 16px !important;
+                font-weight: bold;
+                color: black !important;
+                margin-bottom: 8px;
+                text-align: center;
+                text-shadow: none !important;
+                text-decoration: none !important;
+                animation: none !important;
+            }
+
+            .switches-container {
+                display: block;
+                margin-top: 10px;
+            }
+
+            .switch-item {
+                background: white !important;
+                padding: 10px;
+                border: 1px solid black !important;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin: 6px 0;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+
+            .switch-item:hover {
+                background: white !important;
+                border: 1px solid black !important;
+            }
+
+            .switch-image {
+                width: 60px !important;
+                height: 60px !important;
+                background: #f0f0f0 !important;
+                border: 1px solid #ccc !important;
+            }
+
+            .switch-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .highlight {
+                background: #f0f0f0 !important;
+                color: black !important;
+                padding: 2px 6px !important;
+                border: 1px solid black !important;
+                font-weight: bold;
+                animation: none !important;
+                margin-top: 2px;
+                display: inline-block;
+            }
+
+            /* フッター */
+            .footer {
+                background: #f9f9f9 !important;
+                color: black !important;
+                border: 2px solid black !important;
+                padding: 10px;
+                margin-top: 15px;
+                page-break-inside: avoid;
+            }
+
+            .footer-title {
+                font-size: 14px !important;
+                font-weight: bold;
+                color: black !important;
+                margin-bottom: 8px;
+                text-decoration: none !important;
+            }
+
+            .footer a {
+                color: black !important;
+                text-decoration: underline;
+            }
+
+            .special-note {
+                background: white !important;
+                border: 2px solid black !important;
+                padding: 8px;
+                margin: 10px 0;
+                text-align: center;
+                font-size: 10px !important;
+                color: black !important;
+                box-shadow: none !important;
+            }
+
+            /* 不要な要素を非表示 */
+            blink, marquee {
+                animation: none !important;
+                text-decoration: none;
+            }
+
+            /* ページ分割制御（縦向き用） */
+            .item:nth-child(6n) {
+                page-break-after: always;
+            }
+
+            .switches-section {
+                page-break-before: auto;
+            }
+
+            /* 1ページ目により多くのアイテムを配置 */
+            .items-grid .item:nth-child(-n+6) {
+                page-break-after: avoid;
+            }
+
+            /* 2ページ目以降の調整 */
+            .items-grid .item:nth-child(n+7) {
+                page-break-before: auto;
+            }
+
+            /* カラー出力の無効化 */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
     </style>
 </head>
 <body>

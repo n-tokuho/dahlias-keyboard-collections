@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(osascript:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
