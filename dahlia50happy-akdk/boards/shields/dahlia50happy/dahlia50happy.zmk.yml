@@ -1,0 +1,14 @@
+
+file_format: "1"
+id: dahlia50happy
+name: dahlia50happy
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+siblings:
+  - dahlia50happy_left
+  - dahlia50happy_right

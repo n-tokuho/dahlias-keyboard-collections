@@ -1,0 +1,4 @@
+config SHIELD_DAHLIA50HAPPY_LEFT
+    def_bool $(shields_list_contains,dahlia50happy_left)
+config SHIELD_DAHLIA50HAPPY_RIGHT
+    def_bool $(shields_list_contains,dahlia50happy_right)

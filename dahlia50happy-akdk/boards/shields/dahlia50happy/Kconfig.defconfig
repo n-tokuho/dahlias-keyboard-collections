@@ -1,0 +1,14 @@
+
+if SHIELD_DAHLIA50HAPPY_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "dahlia50happy"
+
+endif
+
+if SHIELD_DAHLIA50HAPPY_LEFT || SHIELD_DAHLIA50HAPPY_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
